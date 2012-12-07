@@ -3,4 +3,26 @@
   <groupId>mp3.ball.com</groupId>
   <artifactId>baal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>jakarta-regexp</groupId>
+  		<artifactId>jakarta-regexp</artifactId>
+  		<version>1.4</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fightingquaker.id3</groupId>
+  		<artifactId>myid3</artifactId>
+  		<version>0.83</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>javazoom</groupId>
+  		<artifactId>jlayer</artifactId>
+  		<version>1.0.1</version>
+  	</dependency>
+  	<dependency>
+	<groupId>commons-io</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>2.4</version>
+</dependency>
+  </dependencies>
 </project>
