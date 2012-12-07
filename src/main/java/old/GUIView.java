@@ -367,7 +367,7 @@ public class GUIView extends javax.swing.JFrame implements View {
                                     {
                                         playButton = new JButton();
                                         playBackPanel.add(playButton);
-                                        playButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("resourceIcons/playBtn.png")));
+                                        playButton.setIcon(new ImageIcon("/home/adeptues/Documents/repos/mp3-robot/src/main/resources/icon.png"));
                                         playButton.setToolTipText("Start Playing");
                                         playButton.addActionListener(new ActionListener() {
 
@@ -388,7 +388,7 @@ public class GUIView extends javax.swing.JFrame implements View {
                                     {
                                         stopBtn = new JButton();
                                         playBackPanel.add(stopBtn);
-                                        stopBtn.setIcon(new ImageIcon(getClass().getClassLoader().getResource("resourceIcons/roundStop.png")));
+                                        stopBtn.setIcon(new ImageIcon("/home/adeptues/Documents/repos/mp3-robot/src/main/resources/icon.png"));
                                         stopBtn.setToolTipText("Stop Playing");
                                         stopBtn.addActionListener(new ActionListener() {
 
@@ -400,7 +400,7 @@ public class GUIView extends javax.swing.JFrame implements View {
                                     {
                                         nextBtn = new JButton();
                                         playBackPanel.add(nextBtn);
-                                        nextBtn.setIcon(new ImageIcon(getClass().getClassLoader().getResource("resourceIcons/nextBtn.png")));
+                                        nextBtn.setIcon(new ImageIcon("/home/adeptues/Documents/repos/mp3-robot/src/main/resources/icon.png"));
                                         nextBtn.setToolTipText("Next Song");
                                         nextBtn.addActionListener(new ActionListener() {
 
@@ -679,7 +679,7 @@ public class GUIView extends javax.swing.JFrame implements View {
         }
     }
 
-    @Override
+    //@Override
     public void notifyGUI(boolean check) {
         if (check) {
             timeLabel.setText("Song Playing");

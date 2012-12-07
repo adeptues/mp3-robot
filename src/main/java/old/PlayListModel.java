@@ -9,7 +9,7 @@ import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 
 
-public class PlayListModel {
+public class PlayListModel{
 	private LinkedList<PlayList> playLists;
 	private ObjectContainer dataBase;
 	private boolean DBAccessable;

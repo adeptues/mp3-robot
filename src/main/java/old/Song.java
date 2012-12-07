@@ -3,6 +3,8 @@ package old;
 import java.io.File;
 import java.net.URL;
 
+import org.apache.commons.lang.RandomStringUtils;
+
 /**
  * This class represents a song or MP3 file and all the textual information
  * associated with the song or mp3 file, as well as the location of the file
@@ -43,6 +45,8 @@ public class Song extends Album {
 	 */
 	private Number year;
 	
+	private String uuid;
+	
 	/**
 	 * default constructor creates a song object with known values 
 	 * which relate to nothing and for all intensive purposes empty
@@ -55,6 +59,7 @@ public class Song extends Album {
 		songLength = 0.0;
 		genre = "unknown";
 		year = 0;
+		uuid = Controller.generateUniqueId();
 		
 	}
 	
@@ -69,7 +74,7 @@ public class Song extends Album {
 	 * @param year
 	 */
 	public Song(String songName, String artist, File fileLocation,
-			Number songLength, String genre, Number year,String album) {
+			Number songLength, String genre, Number year,String album,String uuid) {
 		super(album);
 		this.songName = songName;
 		this.artist = artist;
@@ -77,6 +82,7 @@ public class Song extends Album {
 		this.songLength = songLength;
 		this.genre = genre;
 		this.year = year;
+		this.uuid = uuid;
 	}
 
 
@@ -128,6 +134,26 @@ public class Song extends Album {
 	public Number getYear() {
 		return this.year;
 	}
+
+
+
+	/**
+	 * @return the uuid
+	 */
+	public String getUuid() {
+		return uuid;
+	}
+
+
+
+	/**
+	 * @param uuid the uuid to set
+	 */
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+	
+	
 
 
 

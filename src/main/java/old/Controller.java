@@ -25,6 +25,7 @@ import javazoom.jl.player.advanced.PlaybackListener;
 
 
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.cmc.music.common.ID3ReadException;
 import org.cmc.music.metadata.ImageData;
 import org.cmc.music.metadata.MusicMetadata;
@@ -110,13 +111,13 @@ public class Controller  {
 						//Image resized = image.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
 						
 						
-						song = new Song(songTitle,artist,file[i],duration,genre,year,album);
+						song = new Song(songTitle,artist,file[i],duration,genre,year,album,Controller.generateUniqueId());
 						song.setAlbumArt(albumFile);
 						this.song = song;
 						addSongToPlayList(index);
 					}else{
 						//get image from site
-						song = new Song(songTitle,artist,file[i],duration,genre,year,album);
+						song = new Song(songTitle,artist,file[i],duration,genre,year,album,Controller.generateUniqueId());
 						/*
 						try {
 							List<Artist> artists = Artist.findByName(song.getArtist());
@@ -158,6 +159,10 @@ public class Controller  {
 		}
 		
 		return false;
+	}
+	
+	public static String generateUniqueId() {
+	    return RandomStringUtils.randomAlphanumeric(10);
 	}
 	
 	public void startRecord(String fileName){
